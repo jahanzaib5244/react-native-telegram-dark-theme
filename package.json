@@ -1,24 +1,23 @@
 {
   "name": "react-native-telegram-dark-theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "bigner frienly dark theme implementation",
-  "main": "src/index.tsx",
-  "dependencies": {
+  "main": "src/index.ts",
+  "devDependencies": {
     "react": "*",
     "react-native": "*",
     "@shopify/react-native-skia": "^0.1.212",
     "react-native-view-shot": "^3.7.0",
     "react-native-reanimated": "^3.5.4",
     "react-native-vector-icons": "^10.0.0",
-    "react-native-gesture-handler": "^2.13.1"
+    "react-native-gesture-handler": "^2.13.1",
+    "react-native-builder-bob": "^0.23.1",
+    "typescript": "4.8.4"
   },
-  "devDependencies": {
-    "react-native-builder-bob": "^0.23.1"
-  },
-  "react-native": "index.ts",
-  "source": "index.tsx",
+  "react-native": "src\\index.ts",
+  "source": "src\\index.tsx",
   "module": "lib\\commonjs\\index.js",
-  "types": "index.d.ts",
+  "types": "src\\index.d.ts",
   "scripts": {
     "prepare": "bob build"
   },
@@ -62,5 +61,6 @@
     "telegram-dark-theme",
     "animated-dark-theme",
     "custom-dark-theme"
-  ]
+  ],
+  "license": "ISC"
 }

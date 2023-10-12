@@ -1,3 +1,4 @@
+import {Appearance, StatusBar, View, StyleSheet} from 'react-native';
 import {
   Image,
   Canvas,
@@ -5,9 +6,7 @@ import {
   ImageShader,
   Circle,
 } from '@shopify/react-native-skia';
-import {StatusBar} from 'react-native';
-import {useReducer, useRef} from 'react';
-import {Appearance, View, StyleSheet} from 'react-native';
+import React, {useReducer, useRef} from 'react';
 import {useDerivedValue, useSharedValue} from 'react-native-reanimated';
 
 import ViewShot from 'react-native-view-shot';

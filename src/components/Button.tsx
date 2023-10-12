@@ -1,9 +1,14 @@
 import React from 'react';
 import {Gesture, GestureDetector} from 'react-native-gesture-handler';
-import Feather from 'react-native-vector-icons/Feather';
 import {useTheme} from '../hooks/useTheme';
+import {Image, ImageStyle, StyleProp} from 'react-native';
 
-const Button = () => {
+interface props {
+  button?: React.ReactNode;
+  iconStyle?: StyleProp<ImageStyle>;
+}
+
+const Button: React.FC<props> = ({button, iconStyle}) => {
   const {toggle, colorScheme, active, colors} = useTheme();
   const tap = Gesture.Tap()
     .runOnJS(true)
@@ -14,11 +19,19 @@ const Button = () => {
     });
   return (
     <GestureDetector gesture={tap}>
-      <Feather
-        name={colorScheme === 'light' ? 'moon' : 'sun'}
-        color={colors?.black}
-        size={32}
-      />
+      {!!button ? (
+        button
+      ) : colorScheme === 'dark' ? (
+        <Image
+          source={require('../assets/sun.png')}
+          style={[{tintColor: colors?.black, height: 30, width: 30}, iconStyle]}
+        />
+      ) : (
+        <Image
+          source={require('../assets/moon.png')}
+          style={[{tintColor: colors?.black, height: 30, width: 30}, iconStyle]}
+        />
+      )}
     </GestureDetector>
   );
 };
