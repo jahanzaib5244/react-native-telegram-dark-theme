@@ -54,7 +54,9 @@ export const ColorSchemeProvider = ({
           value={{
             colorScheme,
             dispatch,
-            colors: colorScheme === 'light' ? lightColors : darkColors,
+            colors: (colorScheme === 'light'
+              ? lightColors
+              : darkColors) as typeof darkColors,
             active,
             overlay1,
             overlay2,
