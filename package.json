@@ -1,6 +1,6 @@
 {
   "name": "react-native-telegram-dark-theme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "bigner frienly dark theme implementation",
   "main": "src/index.ts",
   "devDependencies": {

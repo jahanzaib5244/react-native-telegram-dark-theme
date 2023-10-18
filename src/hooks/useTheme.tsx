@@ -75,5 +75,10 @@ export const useTheme = () => {
     },
     [colorScheme, dispatch],
   );
-  return {colorScheme, toggle, colors: ctx.colors, active: ctx.active};
+  return {
+    colorScheme,
+    toggle,
+    colors: ctx.colors as typeof ctx.colors,
+    active: ctx.active,
+  };
 };
